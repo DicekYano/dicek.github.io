@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- ① スクリプトの読み込み -->
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+</head>
+<body style='margin: 0; overflow: hidden;'>
+
+<!-- シーンの追加とデバックUIを非表示 -->
+<a-scene embedded arjs="debugUIEnabled:false;" vr-mode-ui="enabled:false">
+    <a-assets>
+    <!-- 画像をプリロード -->
+    <img id="text" src="./images/text.png">
+    <!-- 3Dモデルをプリロード -->
+
+  </a-assets>
+  <!-- 作成したマーカーでのソース -->
+  <a-marker type='pattern' url='./marker/pattern-marker_1.patt'>
+    
+    <a-entity>
+      <!-- idを指定して画像を表示 -->
+　　　<a-plane position="0 0 0" material="shader:html;target:#text;fps:24;width:600;height:300"></a-plane>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+</a-scene>
+    </a-entity>
+  </a-marker>
+  
+  <a-entity camera></a-entity>
+
+</a-scene>
+</body>
+</html>
